@@ -1,0 +1,58 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace InteractiveCalculateApp
+{
+    public partial class CalcForm : Form
+    {
+        public CalcForm()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void startYear_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void startYear_Click(object sender, EventArgs e)
+        {
+            if (startYear.Text == "введите год")
+                 startYear.Clear();
+        }
+
+        private void Calculate_Click(object sender, EventArgs e)
+        {
+            result.Text = "Вы нажали на кнопку)";
+        }
+
+        
+    }
+}
