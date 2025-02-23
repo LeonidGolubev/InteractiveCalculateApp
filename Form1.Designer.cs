@@ -41,6 +41,8 @@ namespace InteractiveCalculateApp
             this.highText = new System.Windows.Forms.Button();
             this.text_max = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.text_min = new System.Windows.Forms.Label();
+            this.lowText = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -173,12 +175,38 @@ namespace InteractiveCalculateApp
             this.label2.Size = new System.Drawing.Size(0, 16);
             this.label2.TabIndex = 11;
             // 
+            // text_min
+            // 
+            this.text_min.AutoSize = true;
+            this.text_min.ForeColor = System.Drawing.Color.Red;
+            this.text_min.Location = new System.Drawing.Point(119, 465);
+            this.text_min.MaximumSize = new System.Drawing.Size(200, 0);
+            this.text_min.Name = "text_min";
+            this.text_min.Size = new System.Drawing.Size(192, 32);
+            this.text_min.TabIndex = 13;
+            this.text_min.Text = "Вы достигли максимального уменьшения";
+            this.text_min.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.text_min.Visible = false;
+            // 
+            // lowText
+            // 
+            this.lowText.BackColor = System.Drawing.SystemColors.Window;
+            this.lowText.Location = new System.Drawing.Point(154, 393);
+            this.lowText.Name = "lowText";
+            this.lowText.Size = new System.Drawing.Size(123, 64);
+            this.lowText.TabIndex = 12;
+            this.lowText.Text = "Уменьшить шрифт результата";
+            this.lowText.UseVisualStyleBackColor = false;
+            this.lowText.Click += new System.EventHandler(this.lowText_Click);
+            // 
             // CalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(782, 553);
+            this.Controls.Add(this.text_min);
+            this.Controls.Add(this.lowText);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.text_max);
             this.Controls.Add(this.highText);
@@ -212,6 +240,8 @@ namespace InteractiveCalculateApp
         private System.Windows.Forms.Button highText;
         private System.Windows.Forms.Label text_max;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label text_min;
+        private System.Windows.Forms.Button lowText;
     }
 }
 
