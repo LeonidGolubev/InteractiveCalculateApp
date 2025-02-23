@@ -38,6 +38,9 @@ namespace InteractiveCalculateApp
             this.result = new System.Windows.Forms.Label();
             this.erorr_Year = new System.Windows.Forms.Label();
             this.Enter_Instruction = new System.Windows.Forms.Label();
+            this.highText = new System.Windows.Forms.Button();
+            this.text_max = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -104,14 +107,17 @@ namespace InteractiveCalculateApp
             // 
             // result
             // 
+            this.result.AutoEllipsis = true;
             this.result.AutoSize = true;
             this.result.BackColor = System.Drawing.SystemColors.Info;
             this.result.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.result.Location = new System.Drawing.Point(74, 307);
+            this.result.MaximumSize = new System.Drawing.Size(700, 100);
             this.result.Name = "result";
-            this.result.Size = new System.Drawing.Size(644, 25);
+            this.result.Size = new System.Drawing.Size(18, 25);
             this.result.TabIndex = 6;
             this.result.Text = " ";
+            this.result.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.result.TextChanged += new System.EventHandler(this.result_TextChanged);
             // 
             // erorr_Year
@@ -135,12 +141,47 @@ namespace InteractiveCalculateApp
             this.Enter_Instruction.TabIndex = 8;
             this.Enter_Instruction.Text = "Введите год поступления в ВУЗ";
             // 
+            // highText
+            // 
+            this.highText.BackColor = System.Drawing.SystemColors.Window;
+            this.highText.Location = new System.Drawing.Point(548, 393);
+            this.highText.Name = "highText";
+            this.highText.Size = new System.Drawing.Size(123, 64);
+            this.highText.TabIndex = 9;
+            this.highText.Text = "Увеличить шрифт результата";
+            this.highText.UseVisualStyleBackColor = false;
+            this.highText.Click += new System.EventHandler(this.highText_Click);
+            // 
+            // text_max
+            // 
+            this.text_max.AutoSize = true;
+            this.text_max.ForeColor = System.Drawing.Color.Red;
+            this.text_max.Location = new System.Drawing.Point(513, 465);
+            this.text_max.MaximumSize = new System.Drawing.Size(200, 0);
+            this.text_max.Name = "text_max";
+            this.text_max.Size = new System.Drawing.Size(192, 32);
+            this.text_max.TabIndex = 10;
+            this.text_max.Text = "Вы достигли максимального увеличения";
+            this.text_max.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.text_max.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(626, 208);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 16);
+            this.label2.TabIndex = 11;
+            // 
             // CalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(782, 553);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.text_max);
+            this.Controls.Add(this.highText);
             this.Controls.Add(this.Enter_Instruction);
             this.Controls.Add(this.erorr_Year);
             this.Controls.Add(this.result);
@@ -168,6 +209,9 @@ namespace InteractiveCalculateApp
         private System.Windows.Forms.Label result;
         private System.Windows.Forms.Label erorr_Year;
         private System.Windows.Forms.Label Enter_Instruction;
+        private System.Windows.Forms.Button highText;
+        private System.Windows.Forms.Label text_max;
+        private System.Windows.Forms.Label label2;
     }
 }
 

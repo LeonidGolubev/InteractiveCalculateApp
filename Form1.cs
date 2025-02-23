@@ -16,8 +16,8 @@ namespace InteractiveCalculateApp
     {
         string _graduateLevel;
         int _startYearNum;
-
-
+        float size = 14;
+        
         public CalcForm()
         {
             InitializeComponent();
@@ -107,6 +107,38 @@ namespace InteractiveCalculateApp
         private void result_TextChanged(object sender, EventArgs e)
         {
             result.BackColor = SystemColors.Window;
+        }
+
+        private void highText_Click(object sender, EventArgs e)
+        {
+            
+            if (size < 21)
+            {
+                size += 1;
+                ChengeSizeResult(size);
+                label2.Text = $"{size}";
+            }
+
+            else
+                text_max.Visible = true;
+                label2.Text = $"{size}";
+
+        }
+
+
+        public void ChengeSizeResult(float size)
+        {
+            if(size==15)
+                result.Location = new System.Drawing.Point(40, 307);
+            if (size==16)
+                result.Location = new System.Drawing.Point(80, 307);
+            if (size==17)
+                result.Location = new System.Drawing.Point(74, 307);
+            if (size==18) 
+                result.Location = new System.Drawing.Point(45, 307);
+            if ((size == 20) || (size == 21))
+                result.Location = new System.Drawing.Point(130, 307);
+            result.Font = new System.Drawing.Font("Times New Roman", size, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
         }
 
         /*public int Getter(ref _startYearNum) 
