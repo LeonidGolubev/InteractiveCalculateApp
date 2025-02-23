@@ -115,6 +115,8 @@ namespace InteractiveCalculateApp
             if (size < 21)
             {
                 size += 1;
+                if(size > 8)
+                    text_min.Visible = false;
                 ChengeSizeResult(size);
                 label2.Text = $"{size}";
             }
@@ -129,16 +131,44 @@ namespace InteractiveCalculateApp
         public void ChengeSizeResult(float size)
         {
             if(size==15)
-                result.Location = new System.Drawing.Point(40, 307);
+                result.Location = new System.Drawing.Point(45, 307);
             if (size==16)
-                result.Location = new System.Drawing.Point(80, 307);
+                result.Location = new System.Drawing.Point(90, 307);
             if (size==17)
                 result.Location = new System.Drawing.Point(74, 307);
-            if (size==18) 
+            if ((size==18) || (size == 19))
                 result.Location = new System.Drawing.Point(45, 307);
             if ((size == 20) || (size == 21))
                 result.Location = new System.Drawing.Point(130, 307);
+           if (size==13)
+                result.Location = new System.Drawing.Point(90, 307);
+           if (size == 12)
+                result.Location = new System.Drawing.Point(115, 307);
+           if (size == 11)
+                result.Location = new System.Drawing.Point(130, 307);
+           if (size == 10)
+                result.Location = new System.Drawing.Point(170, 307);
+            if (size == 9)
+                result.Location = new System.Drawing.Point(190, 307);
+            if (size == 8)
+                result.Location = new System.Drawing.Point(220, 307);
             result.Font = new System.Drawing.Font("Times New Roman", size, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+        }
+
+        private void lowText_Click(object sender, EventArgs e)
+        {
+            if (size > 8)
+            {
+                size -= 1;
+                if (size < 21)
+                    text_max.Visible = false;
+                ChengeSizeResult(size);
+                label2.Text = $"{size}";
+            }
+
+            else
+                text_min.Visible = true;
+            label2.Text = $"{size}";
         }
 
         /*public int Getter(ref _startYearNum) 
